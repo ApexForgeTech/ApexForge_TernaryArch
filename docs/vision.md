@@ -1,4 +1,4 @@
-Əlbəttə. Sənin **ternary CPU/VM layihən** üçün bir Markdown sənədi hazırladım. Burada:
+ Burada:
 
 * Binary → Decimal → Ternary çevirmə
 * Ternary → Decimal çevirmə

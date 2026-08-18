@@ -18,7 +18,7 @@ Phase 5   Memory Abstraction           ← address translation + mmap backend
 Phase 6   ISA Design                   ← instruction set specification
 Phase 7   Instruction Encoding         ← opcode → binary representation
 Phase 8   VM (Fetch/Decode/Execute)    ← the execution engine
-Phase 9   Assembler (TASM)             ← text assembly → machine code
+Phase 9   Assembler (TRASM)            ← text assembly → machine code
 Phase 10  Executable Format (ATX)      ← .atx binary format
 Phase 11  Runtime                      ← heap, stack, syscalls, I/O
 Phase 12  Kernel                       ← scheduler, virtual memory, drivers
@@ -39,7 +39,7 @@ Phase 14  Real Hardware                ← FPGA / ASIC ternary CPU
 - [ ] Host encoding: **2 bits per trit** (00=0, 01=1, 10=2, 11=invalid)
 - [ ] Memory model: **ternary address space** → translated to binary host offset
 - [ ] Host backend: **mmap()** — Linux virtual memory, not physical RAM
-- [ ] Assembly syntax: **TASM** (ApexForge Ternary Assembly)
+- [ ] Assembly syntax: **TRASM** (ApexForge Ternary Assembly)
 - [ ] Executable format: **ATX** (ApexForge Ternary Executable)
 - [ ] Language: **Rust** throughout the VM layer
 
@@ -292,13 +292,13 @@ STOP
 ```
 
 ### Deliverable
-A running VM that executes TASM programs loaded into memory.
+A running VM that executes TRASM programs loaded into memory.
 
 ---
 
-## Phase 9 — Assembler (TASM)
+## Phase 9 — Assembler (TRASM)
 
-**Goal:** Compile `.tasm` source files into `.atx` executables.
+**Goal:** Compile `.trasm` source files into `.atx` executables.
 
 ### Files
 - `src/assembler/lexer.rs`
@@ -306,13 +306,13 @@ A running VM that executes TASM programs loaded into memory.
 - `src/assembler/encoder.rs`
 
 ### Features
-- [ ] Lexer: tokenize TASM source (opcodes, registers, literals, labels, comments)
+- [ ] Lexer: tokenize TRASM source (opcodes, registers, literals, labels, comments)
 - [ ] Parser: build AST of instructions and directives
 - [ ] Encoder: emit binary machine code
 - [ ] Label resolution: forward references, jump targets
 - [ ] Error reporting: line number, column, message
 
-### TASM Syntax
+### TRASM Syntax
 ```asm
 ; This is a comment
 start:
@@ -326,7 +326,7 @@ result: .word 0
 ```
 
 ### Deliverable
-`tasm` binary: `tasm program.tasm -o program.atx`
+`trasm` binary: `trasm program.trasm -o program.atx`
 
 ---
 

@@ -180,9 +180,9 @@ cargo test
 
 ---
 
-## Assembly Language (TASM)
+## Assembly Language (TRASM)
 
-ApexForge TenaryArch uses its own assembly syntax (`.tasm` files):
+ApexForge TenaryArch uses its own assembly syntax (`.trasm` files):
 
 ```asm
 ; Load two values, add them, store result

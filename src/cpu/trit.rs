@@ -39,20 +39,20 @@ impl Trit {
 
 #[derive(Debug,Clone,Copy,PartialEq,Eq)]
 pub struct AddResult {
-    sum: Trit,
-    carry: Trit
+    pub sum: Trit,
+    pub carry: Trit
 }
 
 #[derive(Debug,Clone,Copy,PartialEq,Eq)]
 pub struct SubResult {
-    diff: Trit,
-    borrow: Trit
+    pub diff: Trit,
+    pub borrow: Trit
 }
 
 #[derive(Debug,Clone,Copy,PartialEq,Eq)]
 pub struct MulResult {
-    product: Trit,
-    carry: Trit
+    pub product: Trit,
+    pub carry: Trit
 }
 
 impl Trit {
